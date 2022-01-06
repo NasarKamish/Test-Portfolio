@@ -35,7 +35,7 @@ export default {
   --neg-background2: #fcb9b2;
   --text-color: #ffffff;
   --detail: #ff0000;
-  --detail-t: #ff0000bb;
+  --detail-t: #ff0000cc;
   --neg-text-color: #b80217;
 }
 
