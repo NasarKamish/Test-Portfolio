@@ -35,7 +35,7 @@ export default {
   --neg-background2: #fcb9b2;
   --text-color: #ffffff;
   --detail: #ff0000;
-  --detail-t: #ff0000cc;
+  --detail-t: #ff000099;
   --neg-text-color: #b80217;
 }
 
@@ -56,22 +56,33 @@ export default {
 /* Nav Bar style */
 
 #nav {
-  /* padding: 30px; */
+  border-radius: 50px;
+  width: 0;
+  height: 0;
   background-color: var(--background1);
   position: fixed;
   z-index: 3;
-  top: -180%;
-  left: -180%;
+  top: 1vh;
+  left: 1vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom-right-radius: 50px;
   transition: all 0.7s linear;
 }
 
 #nav.show {
   top: -25%;
   left: -25%;
+  width: 150vw;
+  height: 150vh;
+  border-radius: 500px;
+}
+
+#nav.show > .nav-links {
+  opacity: 1;
+  pointer-events: auto;
+  width: 150vw;
+  height: 150vh;
 }
 
 #nav a {
@@ -90,10 +101,10 @@ export default {
 .icon {
   padding: 1%;
   position: fixed;
-  top: 2;
-  left: 2;
+  top: 1vw;
+  left: 1vw;
   z-index: 10;
-  font-size: 20px;
+  /* font-size: 20px; */
   border-radius: 50px;
 }
 </style>

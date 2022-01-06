@@ -31,10 +31,15 @@ export default {
   gap: 10px;
   margin: 0%;
   padding: 0%;
-  width: 150vw;
-  height: 150vh;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
   z-index: 3;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.7s linear;
 }
 
 .nav-link {

@@ -16,7 +16,7 @@ export default {
     };
   },
   mounted() {
-    console.log("HI");
+    ("HI");
     document.querySelectorAll(".circle").forEach((circle) => {
       circle.style.animationDelay = `${Math.floor(Math.random() * 21)}s`;
     });

@@ -22,6 +22,6 @@ export default {
 
 .container:hover {
   color: var(--detail);
-  background-color: var(--background2);
+  background-color: var(--text-color);
 }
 </style>
