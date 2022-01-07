@@ -1,7 +1,7 @@
 <template>
   <Background />
   <Icons @click="showNav" class="icon" icon="menu" />
-  <router-view style="position: relative; z-index: 2" />
+  <router-view class="rounter" />
   <div id="nav">
     <Nav />
   </div>
@@ -49,6 +49,25 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Router */
+
+.rounter {
+  width: 90vw;
+  height: 90vh;
+  position: relative;
+  z-index: 2;
+  background: #000000aa;
+  /* box-shadow: 0 8px 32px 0 #000000aa; */
+  /* backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); */
+  border-radius: 100px;
 }
 
 /* Nav Bar style */
