@@ -22,8 +22,6 @@ export default {
   methods: {
     showNav() {
       document.querySelector("#nav").classList.toggle("show");
-      // console.log(this.$store.state.navActive);
-      // this.$store.state.navActive = !this.$store.state.navActive;
     },
   },
 };
