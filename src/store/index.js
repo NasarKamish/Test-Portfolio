@@ -3,6 +3,26 @@ import { createStore } from "vuex";
 export default createStore({
   state: {
     navActive: false,
+    colors: [
+      {
+        id: 0,
+        name: "Red",
+        hex: "ff0000",
+        active: true,
+      },
+      {
+        id: 1,
+        name: "Green",
+        hex: "00ff00",
+        active: false,
+      },
+      {
+        id: 2,
+        name: "Blue",
+        hex: "0000ff",
+        active: false,
+      },
+    ],
     pages: [
       {
         id: 0,

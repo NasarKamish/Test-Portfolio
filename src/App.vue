@@ -1,9 +1,13 @@
 <template>
   <Background />
-  <Icons @click="showNav" class="icon" icon="menu" />
+  <Icons @click="showNav" class="icon nav" icon="menu" />
+  <Icons @click="showTheme" class="icon theme" icon="settings" />
   <router-view class="rounter" />
   <div id="nav">
     <Nav />
+  </div>
+  <div id="theme">
+    <Theme />
   </div>
 </template>
 <script>
@@ -11,6 +15,7 @@ import Buttons from "@/components/tags/Buttons.vue";
 import Icons from "@/components/tags/Icons.vue";
 import Nav from "@/components/Nav.vue";
 import Background from "@/components/Background.vue";
+import Theme from "@/components/Theme.vue";
 
 export default {
   components: {
@@ -18,10 +23,14 @@ export default {
     Icons,
     Buttons,
     Background,
+    Theme,
   },
   methods: {
     showNav() {
       document.querySelector("#nav").classList.toggle("show");
+    },
+    showTheme() {
+      document.querySelector("#theme").classList.toggle("show");
     },
   },
 };
@@ -64,9 +73,6 @@ export default {
   position: relative;
   z-index: 2;
   background: #000000aa;
-  /* box-shadow: 0 8px 32px 0 #000000aa; */
-  /* backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px); */
   border-radius: 100px;
 }
 
@@ -113,15 +119,60 @@ export default {
   transition: all 0.3s linear;
 }
 
+/* Theme Style */
+
+#theme {
+  border-radius: 50px;
+  width: 0;
+  height: 0;
+  background-color: var(--background1);
+  position: fixed;
+  z-index: 3;
+  top: 1vh;
+  right: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.7s linear;
+}
+
+#theme.show {
+  top: -25%;
+  right: -25%;
+  width: 150vw;
+  height: 150vh;
+  border-radius: 500px;
+}
+
+#theme.show > .theme-colors {
+  opacity: 1;
+  pointer-events: auto;
+  width: 150vw;
+  height: 150vh;
+}
+
+#theme p {
+  font-weight: bold;
+  color: var(--text-color);
+  transition: all 0.3s linear;
+}
+
 /* icon Style */
 
 .icon {
   padding: 1%;
   position: fixed;
   top: 1vw;
-  left: 1vw;
+
   z-index: 10;
-  /* font-size: 20px; */
   border-radius: 50px;
+}
+
+.icon.nav {
+  left: 1vw;
+}
+
+.icon.theme {
+  right: 1vw;
 }
 </style>
