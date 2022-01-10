@@ -91,12 +91,6 @@ export default {
   padding: 0.5%;
 }
 
-/* #nav a.router-link-exact-active > span {
-  color: var(--text-color);
-  background-color: var(--detail);
-  transition: all 0.3s linear;
-} */
-
 .theme-span {
   padding: 0%;
   display: flex;
