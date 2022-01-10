@@ -1,38 +1,3 @@
-<!-- <template>
-   <div class="theme-colors">
-    <div class="color">1</div>
-    <div class="color">2</div>
-    <div class="color">3</div>
-  </div> 
-</template> -->
-<!-- <script>
-export default {};
-</script> -->
-<!-- <style scoped>
-.theme {
-  width: 0;
-  height: 0;
-  top: 0;
-  right: 0;
-  z-index: 3;
-}
-
-.theme-colors {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.theme.active {
-  width: 70vw;
-  height: 70vh;
-}
-
-.theme.active > .theme-colors {
-  opacity: 1;
-  pointer-events: auto;
-}
-</style> -->
-
 <template>
   <ul class="theme-colors">
     <p
