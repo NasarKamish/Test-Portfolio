@@ -74,6 +74,7 @@ export default {
   z-index: 3;
   opacity: 0;
   pointer-events: none;
+  overflow: hidden;
   transition: all 0.7s linear;
 }
 
