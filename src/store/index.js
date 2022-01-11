@@ -22,6 +22,12 @@ export default createStore({
         hex: "0000ff",
         active: false,
       },
+      {
+        id: 3,
+        name: "Pink",
+        hex: "ff1493",
+        active: false,
+      },
     ],
     pages: [
       {
