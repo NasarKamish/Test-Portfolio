@@ -1,5 +1,15 @@
 <template>
-  <div class="about">
-    <h1>This is an Skills page</h1>
+  <div class="skills">
+    <Header context="My Skills" />
   </div>
 </template>
+<script>
+import Header from "@/components/tags/Header.vue";
+
+export default {
+  components: {
+    Header,
+  },
+};
+</script>
+<style scoped></style>

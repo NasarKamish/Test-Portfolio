@@ -1,5 +1,15 @@
 <template>
-  <div class="about">
-    <h1>This is an Experience page</h1>
+  <div class="experience">
+    <Header context="My Experience" />
   </div>
 </template>
+<script>
+import Header from "@/components/tags/Header.vue";
+
+export default {
+  components: {
+    Header,
+  },
+};
+</script>
+<style scoped></style>

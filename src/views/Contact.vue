@@ -1,5 +1,15 @@
 <template>
-  <div class="about">
-    <h1>This is an Contact page</h1>
+  <div class="contact">
+    <Header context="Contact Me" />
   </div>
 </template>
+<script>
+import Header from "@/components/tags/Header.vue";
+
+export default {
+  components: {
+    Header,
+  },
+};
+</script>
+<style scoped></style>
