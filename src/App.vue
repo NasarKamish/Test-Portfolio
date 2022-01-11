@@ -1,7 +1,19 @@
 <template>
   <Background />
-  <Icons @click="showNav" class="icon nav" icon="menu" />
-  <Icons @click="showTheme" class="icon theme" icon="settings" />
+  <Icons
+    @click="showNav"
+    class="icon nav"
+    icon="menu"
+    tip="Navigation"
+    direction="right"
+  />
+  <Icons
+    @click="showTheme"
+    class="icon theme"
+    icon="settings"
+    tip="Themes"
+    direction="left"
+  />
   <router-view class="rounter" />
   <div id="nav">
     <Nav />
@@ -163,7 +175,6 @@ export default {
   padding: 1%;
   position: fixed;
   top: 1vw;
-
   z-index: 10;
   border-radius: 50px;
 }
