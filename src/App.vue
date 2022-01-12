@@ -1,19 +1,7 @@
 <template>
   <Background />
-  <Icons
-    @click="showNav"
-    class="icon nav"
-    icon="menu"
-    tip="Navigation"
-    direction="right"
-  />
-  <Icons
-    @click="showTheme"
-    class="icon theme"
-    icon="settings"
-    tip="Themes"
-    direction="left"
-  />
+  <Icons @click="showNav" class="icon nav" icon="menu" />
+  <Icons @click="showTheme" class="icon theme" icon="settings" />
   <router-view class="rounter" />
   <div id="nav">
     <Nav />
@@ -30,6 +18,11 @@ import Background from "@/components/Background.vue";
 import Theme from "@/components/Theme.vue";
 
 export default {
+  data() {
+    return {
+      activeTab: "none",
+    };
+  },
   components: {
     Nav,
     Icons,
@@ -39,9 +32,25 @@ export default {
   },
   methods: {
     showNav() {
+      if (this.activeTab == "none") {
+        this.activeTab = "nav";
+      } else if (this.activeTab == "theme") {
+        document.querySelector("#theme").classList.toggle("show");
+        this.activeTab = "nav";
+      } else if (this.activeTab == "nav") {
+        this.activeTab = "none";
+      }
       document.querySelector("#nav").classList.toggle("show");
     },
     showTheme() {
+      if (this.activeTab == "none") {
+        this.activeTab = "theme";
+      } else if (this.activeTab == "nav") {
+        document.querySelector("#nav").classList.toggle("show");
+        this.activeTab = "theme";
+      } else if (this.activeTab == "theme") {
+        this.activeTab = "none";
+      }
       document.querySelector("#theme").classList.toggle("show");
     },
   },
