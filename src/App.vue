@@ -18,11 +18,6 @@ import Background from "@/components/Background.vue";
 import Theme from "@/components/Theme.vue";
 
 export default {
-  data() {
-    return {
-      activeTab: "none",
-    };
-  },
   components: {
     Nav,
     Icons,
@@ -32,26 +27,30 @@ export default {
   },
   methods: {
     showNav() {
-      if (this.activeTab == "none") {
-        this.activeTab = "nav";
-      } else if (this.activeTab == "theme") {
+      let activeTab = this.$store.state.activeTab;
+      if (activeTab == "none") {
+        activeTab = "nav";
+      } else if (activeTab == "theme") {
         document.querySelector("#theme").classList.toggle("show");
-        this.activeTab = "nav";
-      } else if (this.activeTab == "nav") {
-        this.activeTab = "none";
+        activeTab = "nav";
+      } else if (activeTab == "nav") {
+        activeTab = "none";
       }
       document.querySelector("#nav").classList.toggle("show");
+      this.$store.state.activeTab = activeTab;
     },
     showTheme() {
-      if (this.activeTab == "none") {
-        this.activeTab = "theme";
-      } else if (this.activeTab == "nav") {
+      let activeTab = this.$store.state.activeTab;
+      if (activeTab == "none") {
+        activeTab = "theme";
+      } else if (activeTab == "nav") {
         document.querySelector("#nav").classList.toggle("show");
-        this.activeTab = "theme";
-      } else if (this.activeTab == "theme") {
-        this.activeTab = "none";
+        activeTab = "theme";
+      } else if (activeTab == "theme") {
+        activeTab = "none";
       }
       document.querySelector("#theme").classList.toggle("show");
+      this.$store.state.activeTab = activeTab;
     },
   },
 };

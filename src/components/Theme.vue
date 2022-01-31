@@ -12,11 +12,20 @@
   </ul>
 </template>
 <script>
-import App from "@/App.vue";
 export default {
   methods: {
     showTheme() {
-      App.methods.showTheme();
+      let activeTab = this.$store.state.activeTab;
+      if (activeTab == "none") {
+        activeTab = "theme";
+      } else if (activeTab == "nav") {
+        document.querySelector("#nav").classList.toggle("show");
+        activeTab = "theme";
+      } else if (activeTab == "theme") {
+        activeTab = "none";
+      }
+      document.querySelector("#theme").classList.toggle("show");
+      this.$store.state.activeTab = activeTab;
     },
     toggleTheme(id) {
       let colors = this.$store.state.colors;

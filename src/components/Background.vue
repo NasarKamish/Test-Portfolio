@@ -4,7 +4,7 @@
   </div>
 </template>
 <script>
-import BgContainer from "./tags/BgContainer.vue";
+import BgContainer from "./background/BgContainer.vue";
 
 export default {
   components: {

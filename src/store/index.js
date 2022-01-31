@@ -2,7 +2,7 @@ import { createStore } from "vuex";
 
 export default createStore({
   state: {
-    navActive: false,
+    activeTab: "none",
     colors: [
       {
         id: 0,

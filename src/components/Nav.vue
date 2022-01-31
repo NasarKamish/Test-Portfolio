@@ -13,11 +13,20 @@
   </ul>
 </template>
 <script>
-import App from "@/App.vue";
 export default {
   methods: {
     showNav() {
-      App.methods.showNav();
+      let activeTab = this.$store.state.activeTab;
+      if (activeTab == "none") {
+        activeTab = "nav";
+      } else if (activeTab == "theme") {
+        document.querySelector("#theme").classList.toggle("show");
+        activeTab = "nav";
+      } else if (activeTab == "nav") {
+        activeTab = "none";
+      }
+      document.querySelector("#nav").classList.toggle("show");
+      this.$store.state.activeTab = activeTab;
     },
   },
 };
